@@ -1,15 +1,7 @@
 **Important: Don't forget to update the [Candidate README](#candidate-readme) section**
 
-Real-time Transaction Challenge
+Real-time Transaction
 ===============================
-## Overview
-Welcome to Current's take-home technical assessment for backend engineers! We appreciate you taking the time to complete this, and we're excited to see what you come up with.
-
-Today, you will be building a small but critical component of Current's core banking enging: real-time balance calculation through [event-sourcing](https://martinfowler.com/eaaDev/EventSourcing.html).
-
-## Schema
-The [included service.yml](service.yml) is the OpenAPI 3.0 schema to a service we would like you to create and host. 
-
 ## Details
 The service accepts two types of transactions:
 1) Loads: Add money to a user (credit)
