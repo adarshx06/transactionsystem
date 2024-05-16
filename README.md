@@ -1,6 +1,4 @@
-**Important: Don't forget to update the [Candidate README](#candidate-readme) section**
-
-Real-time Transaction
+Transaction System
 ===============================
 ## Details
 The service accepts 2 types of transactions:
