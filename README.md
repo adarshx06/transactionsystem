@@ -3,27 +3,12 @@
 Real-time Transaction
 ===============================
 ## Details
-The service accepts two types of transactions:
+The service accepts 2 types of transactions:
 1) Loads: Add money to a user (credit)
-
 2) Authorizations: Conditionally remove money from a user (debit)
-
 Every load or authorization PUT should return the updated balance following the transaction. Authorization declines should be saved, even if they do not impact balance calculation.
 
-You may use any technologies to support the service. We do not expect you to use a persistent store (you can you in-memory object), but you can if you want. We should be able to bootstrap your project locally to test.
-
-## Expectations
-We are looking for attention in the following areas:
-1) Do you accept all requests supported by the schema, in the format described?
-
-2) Do your responses conform to the prescribed schema?
-
-3) Does the authorizations endpoint work as documented in the schema?
-
-4) Do you have unit and integrations test on the functionality?
-
-# Candidate README
-## Bootstrap instructions
+# README
 To run:
 1. Make sure you have Java 17 install.
 2. Clone the repository.
@@ -31,7 +16,6 @@ To run:
 4. Application will start running (port 8080) on "hhtp;//localhost:8080".
 
 ## Design considerations
-*Replace this: I decided to build X for Y reasons.*
 1. The service is bulid using Spring framework and Java 17 tried using the concept of event sourcing through logging each transaction.
 2. I tried to follow standard architecture which I know separating controller, services and model layers.
 3. The `Controller` handles the incoming requests and delegates the processing to the `TransactionService`.
@@ -40,8 +24,7 @@ To run:
 6. The Event contains event that needs to be log, allows for capturing and storing all the changes in the system.
 
 
-## Bonus: Deployment considerations
-*Replace this: If I were to deploy this, I would host it in this way with these technologies.*
+## Deployment considerations
 
 Hosting the service on a cloud platform like Amazon Web Services (AWS) or Google Cloud Platform (GCP) will be help full in leverage their scalability and reliability.
 
@@ -52,33 +35,3 @@ Hosting the service on a cloud platform like Amazon Web Services (AWS) or Google
 5. Monitoring the application using tools like Grafana to gain insights into performance, errors, and usage patterns.
 7. I dont have a robust error handling way implemented such that retry mechanism to handle transient failures and ensure data consistency.
 8. Regularly backing up the transaction data and implementing disaster recovery procedures to minimize data loss in case of failures.
-
-## ASCII art
-*Optional but suggested, replace this:*
-```
-                                                                                
-                   @@@@@@@@@@@@@@                                               
-               @@@@@@@@@@@@@@@@@@@@@                                            
-             @@@@@@@@@@@@@@@@@@@@@@@@@@                                         
-          @@@@@@@@@@@@@@@@@@@@@@@@                                  @@@@        
-        @@@@@@@@@@@@@@@@@@@@@      @@@@@@                        @@@@@@@@@      
-     @@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@                 .@@@@@@@@@@@@@@   
-   @@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@@@@@@@@@ 
- @@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@ 
-    @@@@@@@@@@@@@@               @@@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@@@@@@@    
-      @@@@@@@@@@                     @@@@@@@@@@@@@@@@@@    @@@@@@@@@@@@@@       
-         @@@@                          @@@@@@@@@@@@@@@@@@@@                     
-                                          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@         
-                                            @@@@@@@@@@@@@@@@@@@@@@@@            
-                                               @@@@@@@@@@@@@@@@@@               
-                                                    @@@@@@@@                    
-```
-## License
-
-At CodeScreen, we strongly value the integrity and privacy of our assessments. As a result, this repository is under exclusive copyright, which means you **do not** have permission to share your solution to this test publicly (i.e., inside a public GitHub/GitLab repo, on Reddit, etc.). <br>
-
-## Submitting your solution
-
-Please push your changes to the `main branch` of this repository. You can push one or more commits. <br>
-
-Once you are finished with the task, please click the `Submit Solution` link on <a href="https://app.codescreen.com/candidate/9242f07d-198f-4481-a66e-584706e2fc47" target="_blank">this screen</a>.
